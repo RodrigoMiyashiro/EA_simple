@@ -1,15 +1,14 @@
 //
-//  fTaxiTests.swift
-//  fTaxiTests
+//  FindTaxiViewControllerTests.swift
+//  fTaxi
 //
 //  Created by Rodrigo A E Miyashiro on 15/08/17.
 //  Copyright © 2017 Rodrigo Miyashiro. All rights reserved.
 //
 
 import XCTest
-@testable import fTaxi
 
-class fTaxiTests: XCTestCase {
+class FindTaxiViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
