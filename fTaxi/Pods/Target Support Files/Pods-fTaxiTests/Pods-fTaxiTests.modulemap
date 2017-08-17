@@ -1,0 +1,6 @@
+framework module Pods_fTaxiTests {
+  umbrella header "Pods-fTaxiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
