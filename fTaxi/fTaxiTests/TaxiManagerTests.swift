@@ -1,15 +1,18 @@
 //
-//  fTaxiTests.swift
-//  fTaxiTests
+//  TaxiManagerTests.swift
+//  fTaxi
 //
-//  Created by Rodrigo A E Miyashiro on 15/08/17.
+//  Created by Rodrigo A E Miyashiro on 16/08/17.
 //  Copyright © 2017 Rodrigo Miyashiro. All rights reserved.
 //
 
 import XCTest
+import SwiftyJSON
+import CoreLocation
+
 @testable import fTaxi
 
-class fTaxiTests: XCTestCase {
+class TaxiManagerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,4 +36,19 @@ class fTaxiTests: XCTestCase {
         }
     }
     
+    
+    func testListTaxiJSON()
+    {
+        let taxi = JSON(dictionaryLiteral: [("driver-name", "abc"), ("driver-car", "car"), ("lat", -23.5810434255579), ("lng", -46.6153695646358)])
+        let json = JSON(dictionaryLiteral: [("taxis", [taxi])])
+        let listTaxi = ListTaxi(dataJSON: json)
+        
+        let taxiManager = TaxiManager()
+        
+        let coordinate = CLLocationCoordinate2D(latitude: (listTaxi.taxis.first?.lat)!, longitude: (listTaxi.taxis.first?.lng)!)
+        taxiManager.loadTaxiList(coordinate: coordinate) { 
+            XCTAssertNotNil(taxiManager.list)
+        }
+    }
+
 }
