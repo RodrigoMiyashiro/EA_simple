@@ -25,6 +25,8 @@
 		C6A983DA1F43FE7300EB7290 /* TaxiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A983D91F43FE7300EB7290 /* TaxiTests.swift */; };
 		C6A983DD1F43FF1D00EB7290 /* TaxiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A983DC1F43FF1D00EB7290 /* TaxiManager.swift */; };
 		C6A983DF1F4404D900EB7290 /* ListTaxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A983DE1F4404D900EB7290 /* ListTaxi.swift */; };
+		C6A983E11F452E7900EB7290 /* ListTaxiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A983E01F452E7900EB7290 /* ListTaxiTests.swift */; };
+		C6A983E31F452E9D00EB7290 /* TaxiManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A983E21F452E9D00EB7290 /* TaxiManagerTests.swift */; };
 		FAE3B04584633987053ED7B5 /* Pods_fTaxiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DCDCA88EB8EB089E8DFDF8 /* Pods_fTaxiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		C6A983D91F43FE7300EB7290 /* TaxiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiTests.swift; sourceTree = "<group>"; };
 		C6A983DC1F43FF1D00EB7290 /* TaxiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiManager.swift; sourceTree = "<group>"; };
 		C6A983DE1F4404D900EB7290 /* ListTaxi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTaxi.swift; sourceTree = "<group>"; };
+		C6A983E01F452E7900EB7290 /* ListTaxiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTaxiTests.swift; sourceTree = "<group>"; };
+		C6A983E21F452E9D00EB7290 /* TaxiManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiManagerTests.swift; sourceTree = "<group>"; };
 		D2654D92950BA3F674B9636C /* Pods-fTaxiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fTaxiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fTaxiUITests/Pods-fTaxiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D81180E6A51834CE15D42343 /* Pods-fTaxi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fTaxi.release.xcconfig"; path = "Pods/Target Support Files/Pods-fTaxi/Pods-fTaxi.release.xcconfig"; sourceTree = "<group>"; };
 		D831D543C63C74DDBAAE9292 /* Pods-fTaxiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fTaxiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fTaxiTests/Pods-fTaxiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,7 +178,9 @@
 				C6A983C91F43DA8E00EB7290 /* FindTaxiViewControllerTests.swift */,
 				C6A983D31F43FC4B00EB7290 /* RequestTests.swift */,
 				C6A983D51F43FC5900EB7290 /* APIManagerTests.swift */,
+				C6A983E21F452E9D00EB7290 /* TaxiManagerTests.swift */,
 				C6A983D91F43FE7300EB7290 /* TaxiTests.swift */,
+				C6A983E01F452E7900EB7290 /* ListTaxiTests.swift */,
 			);
 			path = fTaxiTests;
 			sourceTree = "<group>";
@@ -519,7 +525,9 @@
 				C6A983CA1F43DA8E00EB7290 /* FindTaxiViewControllerTests.swift in Sources */,
 				C6A983D41F43FC4B00EB7290 /* RequestTests.swift in Sources */,
 				C6A983D61F43FC5900EB7290 /* APIManagerTests.swift in Sources */,
+				C6A983E11F452E7900EB7290 /* ListTaxiTests.swift in Sources */,
 				C6A983DA1F43FE7300EB7290 /* TaxiTests.swift in Sources */,
+				C6A983E31F452E9D00EB7290 /* TaxiManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

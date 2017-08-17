@@ -1,5 +1,5 @@
 //
-//  TaxiTests.swift
+//  ListTaxiTests.swift
 //  fTaxi
 //
 //  Created by Rodrigo A E Miyashiro on 16/08/17.
@@ -11,7 +11,7 @@ import SwiftyJSON
 
 @testable import fTaxi
 
-class TaxiTests: XCTestCase {
+class ListTaxiTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -35,22 +35,21 @@ class TaxiTests: XCTestCase {
         }
     }
     
-    func testTaxiSimple()
+    func testListTaxiSimple()
     {
-        let taxi = Taxi()
-        XCTAssertTrue(taxi.driverName == "")
-        XCTAssertTrue(taxi.driverCar == "")
-        XCTAssertTrue(taxi.lat == 0.0)
-        XCTAssertTrue(taxi.lng == 0.0)
+        let listTaxi = ListTaxi()
+        XCTAssertTrue(listTaxi.taxis.count == 0)
+        
     }
     
-    func testTaxiJSON()
+    func testListTaxiJSON()
     {
-        let json = JSON(dictionaryLiteral: [("driver-name", "abc"), ("driver-car", "car"), ("lat", -10.11), ("lng", -10.11)])
-        let taxi = Taxi(dataJSON: json)
-        XCTAssertTrue(taxi.driverName == "abc")
-        XCTAssertTrue(taxi.driverCar == "car")
-        XCTAssertTrue(taxi.lat == -10.11)
-        XCTAssertTrue(taxi.lng == -10.11)
+        let taxi = JSON(dictionaryLiteral: [("driver-name", "abc"), ("driver-car", "car"), ("lat", -23.5810434255579), ("lng", -46.6153695646358)])
+        let json = JSON(dictionaryLiteral: [("taxis", [taxi])])
+        let listTaxi = ListTaxi(dataJSON: json)
+        XCTAssertTrue(listTaxi.taxis.first?.driverName == "abc")
+        XCTAssertTrue(listTaxi.taxis.first?.driverCar == "car")
+        XCTAssertTrue(listTaxi.taxis.first?.lat == -23.5810434255579)
+        XCTAssertTrue(listTaxi.taxis.first?.lng == -46.6153695646358)
     }
 }

@@ -82,7 +82,7 @@ extension FindTaxiViewController: CLLocationManagerDelegate
         if (status == CLAuthorizationStatus.authorizedWhenInUse || status == CLAuthorizationStatus.authorizedAlways)
         {
             self.mapView.isMyLocationEnabled = true
-            self.loadingPin()
+            self.loadingPin(myLocation: (self.locationManager.location?.coordinate)!)
         }
         else
         {
@@ -103,9 +103,9 @@ extension FindTaxiViewController: CLLocationManagerDelegate
         locationManager.stopUpdatingLocation()
     }
     
-    func loadingPin()
+    func loadingPin(myLocation: CLLocationCoordinate2D)
     {
-        taxisPin.loadTaxiList(coordinate: (self.locationManager.location?.coordinate)!) {
+        taxisPin.loadTaxiList(coordinate: myLocation) {
             for taxi in self.taxisPin.list.taxis
             {
                 self.customTaxiPin(location: CLLocationCoordinate2D(latitude: taxi.lat, longitude: taxi.lng))
@@ -122,5 +122,14 @@ extension FindTaxiViewController: CLLocationManagerDelegate
         marker.position = location
         marker.iconView = markerView
         marker.map = mapView
+    }
+}
+
+extension FindTaxiViewController: GMSMapViewDelegate
+{
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition)
+    {
+        let newLocation = CLLocation(latitude: position.target.latitude,  longitude: position.target.longitude)
+        self.loadingPin(myLocation: newLocation.coordinate)
     }
 }

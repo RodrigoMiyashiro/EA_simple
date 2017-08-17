@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Find Taxi View Controller-->
+        <!--Delegate-->
         <scene sceneID="QvK-c6-xoa">
             <objects>
                 <viewController id="6NJ-8E-ZfO" customClass="FindTaxiViewController" customModule="fTaxi" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,6 +25,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCU-9a-h1R" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6NJ-8E-ZfO" id="LNE-MV-qOg"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,7 +52,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3rA-U2-FAT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rjG-yx-omu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rjG-yx-omu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
